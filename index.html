@@ -11,7 +11,27 @@
       box-sizing:border-box;
       font-family:Arial,sans-serif;
     }
+<script>
+function orderNow(product, price){
+    let phone = prompt("Enter your phone number (07xxxxxxxx)");
 
+    if(!phone){
+        alert("Phone number required");
+        return;
+    }
+    let message =
+`Hello SMART AGROVET, I want to order:
+
+Product: ${product}
+Price: Ksh ${price}
+Phone: ${phone}`;
+
+    let whatsappUrl =
+`https://wa.me/254728316005?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank");
+}
+</script>
     body{
       background:#f5f5f5;
       color:#333;
@@ -147,7 +167,6 @@
       text-align:center;
       padding:20px;
     }
-
     /* FLOATING WHATSAPP BUTTON */
     .floating-whatsapp{
       position:fixed;
@@ -216,7 +235,7 @@
   </div>
 </div>
     <div class="card">
-      <img src="https://unsplash.com/photos/two-yellow-chicks-on-ground-hQV3s7J6eM4">
+      <img src="https://https://images.unsplash.com/photo-1548550023-2bdb3c5beed7">
       <div class="card-content">
         <h3>Chicken Feeds</h3>
         <p class="price">Ksh 200 per bag</p>
