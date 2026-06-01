@@ -80,6 +80,13 @@
       text-decoration:none;
       border-radius:8px;
       font-weight:bold;
+      display:inline-block;
+      margin:5px;
+    }
+
+    .whatsapp-btn{
+      background:#25D366;
+      color:white;
     }
 
     .products{
@@ -115,37 +122,24 @@
       padding:20px;
     }
 
-    .card h3{
-      margin-bottom:10px;
-    }
-
     .price{
       color:green;
       font-weight:bold;
       margin-bottom:15px;
     }
 
-    .about{
-      background:white;
+    .about, .contact{
       padding:60px 20px;
       text-align:center;
     }
 
-    .about h2{
-      margin-bottom:20px;
-      font-size:40px;
+    .about{
+      background:white;
     }
 
     .contact{
       background:green;
       color:white;
-      padding:60px 20px;
-      text-align:center;
-    }
-
-    .contact h2{
-      margin-bottom:20px;
-      font-size:40px;
     }
 
     footer{
@@ -153,6 +147,24 @@
       color:white;
       text-align:center;
       padding:20px;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .floating-whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
     }
   </style>
 </head>
@@ -164,9 +176,9 @@
 
   <nav>
     <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -174,16 +186,20 @@
   <div class="hero-content">
     <h1>Healthy Animals Better Farming</h1>
 
-    <p>
-      We sell chicks, animal feeds, veterinary medicine,
-      and quality farming products.
-    </p>
+    <p>We sell chicks, animal feeds, veterinary medicine and farming solutions.</p>
 
-    <a href="#" class="btn">Shop Now</a>
+    <!-- WhatsApp button -->
+    <a class="btn whatsapp-btn"
+       href="https://wa.me/254728316005"
+       target="_blank">
+       Chat on WhatsApp
+    </a>
+
+    <a href="#products" class="btn">Shop Now</a>
   </div>
 </section>
 
-<section class="products">
+<section class="products" id="products">
 
   <h2>Our Products</h2>
 
@@ -191,7 +207,6 @@
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop">
-
       <div class="card-content">
         <h3>Day Old Chicks</h3>
         <p class="price">Ksh 120 each</p>
@@ -200,50 +215,41 @@
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1200&auto=format&fit=crop">
-
       <div class="card-content">
         <h3>Chicken Feeds</h3>
         <p class="price">Ksh 2,500 per bag</p>
       </div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&auto=format&fit=crop">
-
-      <div class="card-content">
-        <h3>Animal Medicine</h3>
-        <p class="price">Affordable Veterinary Medicine</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<section class="about">
-
+<section class="about" id="about">
   <h2>About Us</h2>
-
   <p>
-    SMART AGROVET helps farmers with quality chicks,
-    animal feeds, veterinary medicine, and professional
-    farming support services.
+    SMART AGROVET supports farmers with quality chicks,
+    feeds, and veterinary solutions.
   </p>
-
 </section>
 
-<section class="contact">
-
+<section class="contact" id="contact">
   <h2>Contact Us</h2>
 
-  <p>Phone: +254 700 000 000</p>
-  <p>Email: smartagrovet@gmail.com</p>
-  <p>Location: Nairobi Kenya</p>
-
+  <p>📞 Phone: <a href="tel:+254728316005" style="color:white;">0728316005</a></p>
+  <p>📧 Email: <a href="mailto:magigethomas62@gmail.com" style="color:white;">magigethomas62@gmail.com</a></p>
+  <p>📍 Location: Uasin Gishu, Soy</p>
 </section>
 
 <footer>
   © 2026 SMART AGROVET. All Rights Reserved.
 </footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="floating-whatsapp"
+   href="https://wa.me/254728316005"
+   target="_blank">
+   💬
+</a>
 
 </body>
 </html>
