@@ -2,10 +2,8 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>QARAH ELPIS ENTERPRISES</title>
 
 <style>
@@ -19,10 +17,10 @@
 
 body{
     background:#f5f5f5;
+    scroll-behavior:smooth;
 }
 
 /* NAVBAR */
-
 nav{
     background:#145214;
     padding:20px;
@@ -44,18 +42,14 @@ nav a{
 }
 
 /* HERO */
-
 .hero{
     height:90vh;
     background:
     linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
     url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1600&auto=format&fit=crop');
-
     background-size:cover;
     background-position:center;
-
     color:white;
-
     display:flex;
     justify-content:center;
     align-items:center;
@@ -83,7 +77,6 @@ nav a{
 }
 
 /* PRODUCTS */
-
 .products{
     padding:80px 10%;
 }
@@ -104,17 +97,26 @@ nav a{
     border-radius:15px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card img{
     width:100%;
-    height:220px;
+    height:200px;
     object-fit:cover;
 }
 
-.card h3,
+.card h3{
+    padding:10px 15px 0;
+}
+
 .card p{
-    padding:15px;
+    padding:10px 15px;
+    font-size:14px;
 }
 
 .card button{
@@ -128,7 +130,6 @@ nav a{
 }
 
 /* CONTACT */
-
 .contact{
     background:#081108;
     color:white;
@@ -142,7 +143,6 @@ nav a{
 }
 
 /* FOOTER */
-
 footer{
     background:black;
     color:white;
@@ -150,117 +150,117 @@ footer{
     padding:20px;
 }
 
-/* MODAL */
-
-.modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-}
-
-.modal-content{
-    background:white;
-    width:90%;
-    max-width:500px;
-    margin:10% auto;
-    padding:30px;
-    border-radius:15px;
-}
-
-.close{
-    float:right;
-    font-size:30px;
-    cursor:pointer;
-}
-
 </style>
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-
 <nav>
-
 <h2>QARAH ELPIS ENTERPRISES</h2>
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Products</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <!-- HERO -->
-
 <section class="hero">
 
 <h1>Premium Animal Feeds & Veterinary Solutions</h1>
 
-<p>
-Trusted Animal Nutrition & Veterinary Solutions
-</p>
+<p>Trusted Animal Nutrition & Veterinary Solutions</p>
 
-<button class="btn">
+<button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
 View Products
 </button>
 
 </section>
 
 <!-- PRODUCTS -->
-
-<section class="products">
+<section class="products" id="products">
 
 <h2>Our Products</h2>
 
 <div class="product-container">
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=1200&auto=format&fit=crop">
-
+<img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c">
 <h3>Kienyeji Mash Growers</h3>
-
-<p>Healthy poultry feed for growth.</p>
-
-<button onclick="openModal('Kienyeji Mash Growers')">
-View More
-</button>
-
+<p>High-quality feed for growing indigenous chickens.</p>
+<button>Order on WhatsApp</button>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a">
+<h3>Kienyeji Layers</h3>
+<p>Balanced nutrition for egg-laying chickens.</p>
+<button>Order on WhatsApp</button>
+</div>
 
-<img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=1200&auto=format&fit=crop">
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
 <h3>Dairy Meal</h3>
-
-<p>Nutritious dairy cattle feed.</p>
-
-<button onclick="openModal('Dairy Meal')">
-View More
-</button>
-
+<p>Improves milk production and cattle health.</p>
+<button>Order on WhatsApp</button>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1602526210990-1b0c8f2c2b63">
+<h3>Dairy Meal Mix</h3>
+<p>Enhanced dairy feed blend for maximum yield.</p>
+<button>Order on WhatsApp</button>
+</div>
 
-<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1200&auto=format&fit=crop">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1592928302636-c83cf1c8c1f0">
+<h3>Chick Mash Kienyeji</h3>
+<p>Special starter feed for healthy chicks.</p>
+<button>Order on WhatsApp</button>
+</div>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589923188900-85dae523342b">
+<h3>Fugo Chick Mash</h3>
+<p>Quality chick feed for fast growth and immunity.</p>
+<button>Order on WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600857544200-b2f3a4c5c8b0">
+<h3>Fugo Growers</h3>
+<p>Supports strong growth for young poultry.</p>
+<button>Order on WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603052875638-9c3d1b3b5f4a">
 <h3>Fugo Layers</h3>
+<p>Boosts egg production and bird strength.</p>
+<button>Order on WhatsApp</button>
+</div>
 
-<p>High quality layers feed.</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1625246333195-78d9c1a9d7a4">
+<h3>Wheat Bran</h3>
+<p>High-fiber feed supplement for livestock.</p>
+<button>Order on WhatsApp</button>
+</div>
 
-<button onclick="openModal('Fugo Layers')">
-View More
-</button>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603052875602-7f7c1c1c1c1c">
+<h3>Pollard</h3>
+<p>Energy-rich feed for cattle and poultry.</p>
+<button>Order on WhatsApp</button>
+</div>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-1625246333200-8f9c1a9d7a4b">
+<h3>Maize Germ Bran</h3>
+<p>Improves weight gain and animal performance.</p>
+<button>Order on WhatsApp</button>
 </div>
 
 </div>
@@ -268,88 +268,21 @@ View More
 </section>
 
 <!-- CONTACT -->
-
-<section class="contact">
+<section class="contact" id="contact">
 
 <h2>Contact Us</h2>
 
-<p>
-📞 <a href="tel:0728316005">0728316005</a>
-</p>
-
-<p>
-📧 <a href="mailto:magigethomas62@gmail.com">
-magigethomas62@gmail.com
-</a>
-</p>
-
-<p>
-💬 <a href="https://wa.me/254728316005" target="_blank">
-Chat on WhatsApp
-</a>
-</p>
+<p>📞 <a href="tel:0728316005">0728316005</a></p>
+<p>📧 <a href="mailto:magigethomas62@gmail.com">magigethomas62@gmail.com</a></p>
+<p>💬 <a href="https://wa.me/254728316005" target="_blank">Chat on WhatsApp</a></p>
 
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
 <h3>QARAH ELPIS ENTERPRISES</h3>
-
 <p>© 2026 All Rights Reserved</p>
-
 </footer>
-
-<!-- MODAL -->
-
-<div class="modal" id="modal">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeModal()">
-&times;
-</span>
-
-<h2 id="modal-title"></h2>
-
-<p>
-Premium animal feed product with trusted quality.
-</p>
-
-</div>
-
-</div>
-
-<script>
-
-function openModal(product){
-
-document.getElementById("modal").style.display = "block";
-
-document.getElementById("modal-title").innerText = product;
-
-}
-
-function closeModal(){
-
-document.getElementById("modal").style.display = "none";
-
-}
-
-window.onclick = function(event){
-
-let modal = document.getElementById("modal");
-
-if(event.target == modal){
-
-modal.style.display = "none";
-
-}
-
-}
-
-</script>
 
 </body>
 </html>
